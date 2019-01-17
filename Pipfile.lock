@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b67489360ef3fd01546006a8c7a34def7e80eb36ad42a38d97278cb32da6885e"
+            "sha256": "7714178408bfdc8ce0eed270075b2db29c4e949ed406ad87e0e4a963d9ee0248"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -89,14 +89,6 @@
             "index": "pypi",
             "version": "==0.3.7"
         },
-        "html2text": {
-            "hashes": [
-                "sha256:490db40fe5b2cd79c461cf56be4d39eb8ca68191ae41ba3ba79f6cb05b7dd662",
-                "sha256:627514fb30e7566b37be6900df26c2c78a030cc9e6211bda604d8181233bcdd4"
-            ],
-            "index": "pypi",
-            "version": "==2018.1.9"
-        },
         "idna": {
             "hashes": [
                 "sha256:c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407",
@@ -157,6 +149,20 @@
                 "sha256:fb7c206e01ad85ce57feeaaa0bf784b97fa3cad0d4a5737bc5295785f5c613a1"
             ],
             "version": "==1.1.0"
+        },
+        "pyftpdlib": {
+            "hashes": [
+                "sha256:e5fca613978743d41c3bfc68e25a811d646a3b8a9eee9eb07021daca89646a0f"
+            ],
+            "index": "pypi",
+            "version": "==1.5.4"
+        },
+        "pysendfile": {
+            "hashes": [
+                "sha256:510a414b270986fba3c79cb76d90a4c910c701bfb43ff983a5d4e92846050e17"
+            ],
+            "index": "pypi",
+            "version": "==2.0.1"
         },
         "pytz": {
             "hashes": [

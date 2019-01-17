@@ -4,6 +4,8 @@ import requests
 from celery import Celery
 from bs4 import BeautifulSoup
 
+from settings import STORAGE_DIR
+
 celery_app = Celery('tasks', backend='amqp', broker='amqp://localhost')
 
 @celery_app.task
@@ -14,12 +16,15 @@ def get_text(site):
     for script in soup(["script", "style"]):
         script.extract()
 
-    directory = '/tmp/txt/'
+    raw_text = soup.get_text()
+    lines = [line for line in raw_text.splitlines() if line]
+
+    directory = STORAGE_DIR + os.path.basename(site) + '/'
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    with open(directory + os.path.basename(site), 'w') as f:
-        f.write(soup.get_text())
+    with open(directory + 'content.txt', 'w') as f:
+        f.writelines(lines)
 
 
 @celery_app.task
@@ -30,7 +35,7 @@ def get_images(site):
     img_tags = soup.find_all('img')
     urls = [img['src'] for img in img_tags]
 
-    directory = '/tmp/images/' + os.path.basename(site) + '/'
+    directory = STORAGE_DIR + os.path.basename(site) + '/img/'
     if not os.path.exists(directory):
         os.makedirs(directory)
 

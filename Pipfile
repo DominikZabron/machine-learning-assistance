@@ -7,10 +7,11 @@ verify_ssl = true
 
 [packages]
 flask-restful = "*"
-html2text = "*"
 celery = "*"
 requests = "*"
 beautifulsoup4 = "*"
+pyftpdlib = "*"
+pysendfile = "*"
 
 [requires]
 python_version = "3.7"

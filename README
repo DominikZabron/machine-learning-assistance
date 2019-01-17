@@ -15,3 +15,7 @@
 ### Start celery
 
     $ celery -A tasks worker --loglevel=info
+
+### Run FTP Server
+
+    $ sudo python storage/ftp.py
