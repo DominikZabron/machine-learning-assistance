@@ -18,4 +18,4 @@
 
 ### Run FTP Server
 
-    $ sudo python storage/ftp.py
+    $ sudo python ftp.py

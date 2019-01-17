@@ -14,12 +14,14 @@ def main():
     handler = FTPHandler
     handler.authorizer = authorizer
 
-    address = ('127.0.0.1', 21)
+    address = ('0.0.0.0', 21)
     server = FTPServer(address, handler)
 
     server.serve_forever()
 
 
 if __name__ == "__main__":
+    if not os.path.exists(STORAGE_DIR):
+        os.makedirs(STORAGE_DIR)
     os.chdir(STORAGE_DIR)
     main()
