@@ -1,5 +1,13 @@
 # Machine learning assistant
 
+## Installation
+
+## Using Docker
+
+    $ docker-compose build && docker-compose up
+    
+## Local installation
+
 ### Install rabbitmq
 
     $ brew install rabbitmq

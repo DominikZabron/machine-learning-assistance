@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 from settings import STORAGE_DIR
 
-celery_app = Celery('tasks', backend='amqp', broker='amqp://localhost')
+celery_app = Celery('tasks', backend='amqp', broker='amqp://rabbitmq')
 
 @celery_app.task
 def get_text(site):

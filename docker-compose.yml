@@ -14,9 +14,9 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
-    command: python api.py
+    command: ['flask', 'run', '--host=0.0.0.0']
     ports:
-      - '5000:80'
+      - '5000:5000'
     links:
       - rabbitmq
 
@@ -32,6 +32,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: python ftp.py
+    command: ['python', 'ftp.py']
     ports:
       - '21:21'

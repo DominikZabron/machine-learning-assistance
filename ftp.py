@@ -9,7 +9,7 @@ from settings import STORAGE_DIR
 
 def main():
     authorizer = DummyAuthorizer()
-    authorizer.add_anonymous(os.getcwd())
+    authorizer.add_anonymous('.')
 
     handler = FTPHandler
     handler.authorizer = authorizer
